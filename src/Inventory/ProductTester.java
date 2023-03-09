@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package inventory;
+package Inventory;
 
 /**
  *
@@ -24,12 +24,12 @@ public class ProductTester {
         Product p4 = new Product("Lapiz", 4, 45, 900);
         Product p5 = new Product("Corrector", 5, 8, 2200);
         Product p6 = new Product("Borrador", 6, 46, 700);
-        
-        System.out.println(p1.toString());
-        System.out.println(p2.toString());
-        System.out.println(p3.toString());
-        System.out.println(p4.toString());
-        System.out.println(p5.toString());
-        System.out.println(p6.toString());
+
+        System.out.println(p1.toString() + "\n");
+        System.out.println(p2.toString() + "\n");
+        System.out.println(p3.toString() + "\n");
+        System.out.println(p4.toString() + "\n");
+        System.out.println(p5.toString() + "\n");
+        System.out.println(p6.toString() + "\n");
     }
 }
