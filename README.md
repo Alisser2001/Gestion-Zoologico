@@ -1,1 +1,0 @@
-# Tecnicas-de-programacion-y-laboratorio
