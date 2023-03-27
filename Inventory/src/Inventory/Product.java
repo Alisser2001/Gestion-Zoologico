@@ -14,6 +14,7 @@ public class Product {
     private int id, stock;
     private float price;
     private boolean status = true;
+    private int maxSize;
     
     //Empty constructor
     public Product(){};
@@ -27,6 +28,15 @@ public class Product {
         this.status = status;
     };
     
+    
+    public void addToInventory(int stock){
+        this.stock += stock;
+    };
+    public void deductFromInventory(int stock){
+        this.stock -= stock;
+    }
+    
+    
     //Set nameProduct
     public void setNameProduct(String nameProduct){
         this.nameProduct = nameProduct;
@@ -34,10 +44,6 @@ public class Product {
     //Set id
     public void setIdNumber(int id){
         this.id = id;
-    };
-    //Set stock
-    public void setStock(int stock){
-        this.stock = stock;
     };
     //Set price
     public void setPrice(float price){
@@ -79,6 +85,11 @@ public class Product {
     //Product Values
     public String toString(){
         String status = this.status ? "Activo" : "Descatalogado";
-        return "Product: " + this.nameProduct + "\nPrice: " + this.price + "\nId: " + this.id + "\nStock unities: " + this.stock + "\nStock value: " + this.getInventoryValue() + "\nProduct Status: " + status + "\n";
+        return "Product: " + this.nameProduct + 
+               "\nPrice: " + this.price + 
+               "\nId: " + this.id + 
+               "\nStock unities: " + this.stock + 
+               "\nStock value: " + this.getInventoryValue() + 
+               "\nProduct Status: " + status + "\n";
     };
 }
