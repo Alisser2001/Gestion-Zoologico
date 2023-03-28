@@ -14,7 +14,6 @@ public class Product {
     private int id, stock;
     private float price;
     private boolean status = true;
-    private int maxSize;
     
     //Empty constructor
     public Product(){};
@@ -30,7 +29,11 @@ public class Product {
     
     
     public void addToInventory(int stock){
-        this.stock += stock;
+        if(this.getStatus() == true){
+            this.stock += stock;
+        }else{
+            System.out.println("El producto está descontinuado");
+        }
     };
     public void deductFromInventory(int stock){
         this.stock -= stock;

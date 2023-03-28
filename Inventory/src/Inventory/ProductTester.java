@@ -200,4 +200,54 @@ public class ProductTester {
         productChoice = getProductNumber(in, productos);
         productos[productChoice - 1].setStatus(false);
     }
+
+//     Laboratorio 2 de la sección 7
+//     Incompleto porque las instrucciones del documento sobre lo que hay que hacer
+//     Son muy poco claras
+//     Ya creé las subclases con herencia CD y DVD, pero no entiendo la lógica del cómo espera que funcione esta última parte
+//     Al modificar ProductTester
+    
+//    public static void addCDToInventory(Product[] productos, Scanner in, int i) {
+//        String cdName, artista, discografica;
+//        int cdNumber, cdQty, numCanciones;
+//        float cdPrice;
+//        System.out.println("Please enter the CD name: ");
+//        cdName = in.next();
+//        System.out.println("Please enter the artist name: ");
+//        artista = in.next();
+//        System.out.println("Please enter the record label name:  ");
+//        discografica = in.next();
+//        System.out.println("Please enter the number of songs:  ");
+//        numCanciones = in.nextInt();
+//        System.out.println("Please enter the quantity of stock for this product:  ");
+//        cdQty = in.nextInt();
+//        System.out.println("Please enter the price for this product:  ");
+//        cdPrice = in.nextFloat();
+//        System.out.println("Please enter the item number: ");
+//        cdNumber = in.nextInt();
+//        CD cd = new CD(cdName, cdNumber, cdQty, cdPrice, artista, discografica, numCanciones);
+//        productos[i] = cd;
+//    }
+//    
+//    public static void addDVDToInventory(Product[] productos, Scanner in, int i) {
+//        String dvdName, clasificacion, estudio;
+//        int dvdNumber, dvdQty;
+//        float dvdPrice, duracion;
+//        System.out.println("Please enter the DVD name: ");
+//        dvdName = in.next();
+//        System.out.println("Please enter the film studio name:  ");
+//        estudio = in.next();
+//        System.out.println("Please enter the age rating: ");
+//        clasificacion = in.next();
+//        System.out.println("Please enter the length in minutes: ");
+//        duracion = in.nextFloat();
+//        System.out.println("Please enter the quantity of stock for this product:  ");
+//        dvdQty = in.nextInt();
+//        System.out.println("Please enter the price for this product:  ");
+//        dvdPrice = in.nextFloat();
+//        System.out.println("Please enter the item number: ");
+//        dvdNumber = in.nextInt();
+//        DVD dvd = new DVD(dvdName, dvdNumber, dvdQty, dvdPrice, duracion, clasificacion, estudio);
+//        productos[i] = dvd;
+//    }
 }
