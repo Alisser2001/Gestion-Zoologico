@@ -1,0 +1,37 @@
+{"clientes": [
+  {
+    "identificacion": 123456789,
+    "puntos": 250,
+    "nombre": "John Doe"
+  },
+  {
+    "identificacion": 987654321,
+    "puntos": 500,
+    "nombre": "Jane Smith"
+  },
+  {
+    "identificacion": 456789123,
+    "puntos": 750,
+    "nombre": "Michael Johnson"
+  },
+  {
+    "identificacion": 789123456,
+    "puntos": 1200,
+    "nombre": "Sarah Williams"
+  },
+  {
+    "identificacion": 71753417,
+    "puntos": 75,
+    "nombre": "Carlos mati"
+  },
+  {
+    "identificacion": 43158401,
+    "puntos": 50,
+    "nombre": "nancy bedoya"
+  },
+  {
+    "identificacion": 1000762385,
+    "puntos": 75,
+    "nombre": "Brahiam Acosta"
+  }
+]}

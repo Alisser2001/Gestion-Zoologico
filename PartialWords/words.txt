@@ -1,1 +1,0 @@
-Java es un lenguaje de programación orientado a objetos muy popular y ampliamente utilizado en el desarrollo de aplicaciones web, de escritorio y móviles. Se caracteriza por ser robusto, seguro y portable, lo que significa que una vez que se escribe el código en una plataforma, puede ser ejecutado en otra plataforma sin modificaciones.

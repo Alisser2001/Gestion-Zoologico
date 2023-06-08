@@ -1,0 +1,5 @@
+Nuestro zoologico contará con funcionalidades tales como:
+- Agregar, modificar y eliminar animales.
+- Gestionar la compra y modificación de planes de visita al zoologico.
+- Llevara un sistema de puntos, donde estos influiran en el valor de la boleta.
+- Llevara un registro de los ingresos económicos del zoologico.

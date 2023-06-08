@@ -1,0 +1,34 @@
+{
+  "planes": [
+    {
+      "nombre": "Regular",
+      "precio": 20000,
+      "descripcion": "Incluye acceso al zoológico para una persona.",
+      "puntos": 50
+    },
+    {
+      "nombre": "Regular con guía",
+      "precio": 35000,
+      "descripcion": "Incluye acceso al zoológico para una persona y un guía para recorrido.",
+      "puntos": 75
+    },
+    {
+      "nombre": "Familiar",
+      "precio": 60000,
+      "descripcion": "Incluye acceso al zoológico para dos adultos y dos niños.",
+      "puntos": 100
+    },
+    {
+      "nombre": "Familiar con guía",
+      "precio": 80000,
+      "descripcion": "Incluye acceso al zoológico para dos adultos y dos niños, y un guía para recorrido.",
+      "puntos": 150
+    },
+    {
+      "nombre": "Estudiante",
+      "precio": 7500,
+      "descripcion": "Incluye acceso al zoológico para un estudiante con identificación vigente.",
+      "puntos": 0
+    }
+  ]
+}
