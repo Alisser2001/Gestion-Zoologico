@@ -643,7 +643,7 @@ public class CrearNuevoAnimal {
         nuevoReptilAcuatico.put("caracter", caracter);
         nuevoReptilAcuatico.put("precauciones", precauciones);
         reptilesAcuaticos.put(nuevoReptilAcuatico);
-        infoJson.getJSONArray("animales_peces").put(nuevoReptilAcuatico);
+        infoJson.getJSONArray("animales_reptiles_acuaticos").put(nuevoReptilAcuatico);
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
         CrearAnimal crear = new CrearAnimal();
         return crear.crearReptilesAcuaticos(codigo, nombre, especie, genero, peso, edad, dietaPrincipal, dietaCompleta, tipoPiel, coloracion, metodoRespiracion, numAletas, habitad, zona, procedencia, riesgoExtincion, gestacion, tipoGestacion, tiempoGestacion, tempEncubacion, peligroso, nivelPeligrosidad, venenoso, tipoVeneno, maltratado, comportamientoSocial, caracter, precauciones);
@@ -709,7 +709,7 @@ public class CrearNuevoAnimal {
         nuevoReptilTerrestre.put("caracter", caracter);
         nuevoReptilTerrestre.put("precauciones", precauciones);
         reptilesTerrestres.put(nuevoReptilTerrestre);
-        infoJson.getJSONArray("animales_peces").put(nuevoReptilTerrestre);
+        infoJson.getJSONArray("animales_reptiles_terrestres").put(nuevoReptilTerrestre);
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
         CrearAnimal crear = new CrearAnimal();
         return crear.crearReptilesTerrestres(codigo, nombre, especie, genero, peso, edad, dietaPrincipal, dietaCompleta, tipoPiel, coloracion, numPatas, habitad, zona, procedencia, riesgoExtincion, gestacion, tipoGestacion, tiempoGestacion, tempEncubacion, peligroso, nivelPeligrosidad, venenoso, tipoVeneno, maltratado, comportamientoSocial, caracter, precauciones);

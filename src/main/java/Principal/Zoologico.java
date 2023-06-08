@@ -29,9 +29,10 @@ public class Zoologico {
             info.GetInfoReptilesAcuaticos();
             info.GetInfoReptilesTerrestres();
             
-            System.out.println(Animales.getAnimales());
-            System.out.println(Animales.cantAnimales);
+            System.out.println("Nuestros Animles: ");
+            System.out.println(Animales.animales);
             
+            //Init window view
             InitView iniciar = new InitView();
     }
 }

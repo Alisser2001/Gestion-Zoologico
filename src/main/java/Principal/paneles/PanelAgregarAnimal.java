@@ -80,6 +80,24 @@ public class PanelAgregarAnimal extends JPanel{
                 else if(opcionSeleccionada.equals("Ave terrestre")){
                     principal.showPanelAveTerrestre();
                 }
+                else if(opcionSeleccionada.equals("Insecto")){
+                    principal.showPanelInsectos();
+                }
+                else if(opcionSeleccionada.equals("Mamifero acuatico")){
+                    principal.showMamiferoAcuatico();
+                }
+                else if(opcionSeleccionada.equals("Mamifero terrestre")){
+                    principal.showPanelMamiferoTerrestre();
+                }
+                else if(opcionSeleccionada.equals("Peces")){
+                    principal.showPanelPeces();
+                }
+                else if(opcionSeleccionada.equals("Reptil acuatico")){
+                    principal.showPanelReptilAcuatico();
+                }
+                else if(opcionSeleccionada.equals("Reptil terrestre")){
+                    principal.showPanelReptilTerrestre();
+                }
             }
         });
     }

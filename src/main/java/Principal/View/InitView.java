@@ -9,6 +9,12 @@ import Principal.paneles.Animales.PanelAveAcuatica;
 import Principal.paneles.Animales.PanelAveCarroña;
 import Principal.paneles.Animales.PanelAveExotica;
 import Principal.paneles.Animales.PanelAveTerrestre;
+import Principal.paneles.Animales.PanelInsectos;
+import Principal.paneles.Animales.PanelMamiferoAcuatico;
+import Principal.paneles.Animales.PanelMamiferoTerrestre;
+import Principal.paneles.Animales.PanelPeces;
+import Principal.paneles.Animales.PanelReptilAcuatico;
+import Principal.paneles.Animales.PanelReptilTerrestre;
 import Principal.paneles.PanelAgregarAnimal;
 import Principal.paneles.PanelAnimalAgregado;
 import Principal.paneles.PanelAnimalEliminado;
@@ -117,8 +123,12 @@ public class InitView extends JFrame{
     }
     
     public void showPanelAnfibio(){
-        PanelAnfibio anfibio = new PanelAnfibio(this);
-        panelPrincipal.add(anfibio);
+        PanelAnfibio animal = new PanelAnfibio(this);
+        panelPrincipal.add(animal);
+    }
+    public void showPanelInsectos(){
+        PanelInsectos animal = new PanelInsectos(this);
+        panelPrincipal.add(animal);
     }
     public void showPanelAveTerrestre(){
         PanelAveTerrestre animal = new PanelAveTerrestre(this);
@@ -134,16 +144,37 @@ public class InitView extends JFrame{
     }
     
     public void showPanelAveAcuatica(){
-        PanelAveAcuatica anfibio = new PanelAveAcuatica(this);
-        panelPrincipal.add(anfibio);
+        PanelAveAcuatica animal = new PanelAveAcuatica(this);
+        panelPrincipal.add(animal);
     }
     public void showPanelAveCarroña(){
-        PanelAveCarroña anfibio = new PanelAveCarroña(this);
-        panelPrincipal.add(anfibio);
+        PanelAveCarroña animal = new PanelAveCarroña(this);
+        panelPrincipal.add(animal);
     }
     public void showPanelAveExotica(){
-        PanelAveExotica anfibio = new PanelAveExotica(this);
-        panelPrincipal.add(anfibio);
+        PanelAveExotica animal = new PanelAveExotica(this);
+        panelPrincipal.add(animal);
+    }
+    public void showPanelReptilTerrestre(){
+        PanelReptilTerrestre animal = new PanelReptilTerrestre(this);
+        panelPrincipal.add(animal);
+    }
+    public void showMamiferoAcuatico(){
+        PanelMamiferoAcuatico animal = new PanelMamiferoAcuatico(this);
+        panelPrincipal.add(animal);
+    }
+    public void showPanelMamiferoTerrestre(){
+        PanelMamiferoTerrestre animal = new PanelMamiferoTerrestre(this);
+        panelPrincipal.add(animal);
+    }
+    public void showPanelReptilAcuatico(){
+        
+        PanelReptilAcuatico animal = new PanelReptilAcuatico(this);
+        panelPrincipal.add(animal);
+    }
+    public void showPanelPeces(){
+        PanelPeces animal = new PanelPeces(this);
+        panelPrincipal.add(animal);
     }
     public void showPanelAnimalAgregado(){
         PanelAnimalAgregado animal = new PanelAnimalAgregado(this);

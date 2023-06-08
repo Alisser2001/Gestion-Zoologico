@@ -224,7 +224,7 @@ public class PanelAveTerrestre extends JPanel{
                 // Obtener los valores ingresados en los campos
                 codigo = Integer.parseInt(codigoField.getText());
                 edad = Integer.parseInt(edadField.getText());
-                peso = Float.parseFloat(codigoField.getText());
+                peso = Float.parseFloat(pesoField.getText());
                 vuela = vuelaCheckBox.isSelected();
                 gestacion = gestacionCheckBox.isSelected();
                 peligroso = peligrosoCheckBox.isSelected();

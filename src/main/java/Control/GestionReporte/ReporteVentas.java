@@ -39,7 +39,7 @@ public class ReporteVentas {
         Document documento = new Document(PageSize.A4);
         documento.setMargins(0,0,0,0);
         try{
-            PdfWriter.getInstance(documento, new FileOutputStream("reportes/Reporte_"+getHora()+".pdf"));
+            PdfWriter.getInstance(documento, new FileOutputStream("src/main/java/Reportes/Reporte_"+getHora()+".pdf"));
             
             documento.open();
             
@@ -79,7 +79,14 @@ public class ReporteVentas {
             reporte.addCell(cell4);
             reporte.addCell(cell5);
             
-            crearCeldas(Ventas,reporte);
+            int suma = crearCeldas(Ventas,reporte);
+            
+            //añadir celdas de espaciado y el total de ventas
+            reporte.addCell("");
+            reporte.addCell("");
+            reporte.addCell("");
+            reporte.addCell("Total ventas: ");
+            reporte.addCell(""+suma);
             
             documento.add(reporte);
             
@@ -97,7 +104,8 @@ public class ReporteVentas {
         return dateTime;
     }
     
-    public static void crearCeldas(ArrayList<String[]> array, PdfPTable pdf){
+    public static int crearCeldas(ArrayList<String[]> array, PdfPTable pdf){
+        int sumatoria=0;
         for(int i=0; i<array.size();i++){
             double descuento;
             double cantidad = parseDouble(array.get(i)[1]);
@@ -115,6 +123,8 @@ public class ReporteVentas {
             }   
             pdf.addCell(""+descuento);
             pdf.addCell(""+(total-descuento));
+            sumatoria +=(total-descuento);
         }
+        return sumatoria;
     }
 }

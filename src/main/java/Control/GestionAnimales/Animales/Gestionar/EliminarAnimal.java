@@ -30,7 +30,7 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_anfibios").clear();
-        for(int i=0; i<anfibios.length(); i++){
+        for(int i=0 ; i< anfibios.length();i++){
             infoJson.getJSONArray("animales_anfibios").put(anfibios.get(i));
         }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
@@ -47,7 +47,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_aves_acuaticas").clear();
-        infoJson.getJSONArray("animales_aves_acuaticas").put(avesAcuaticas);
+        for(int i=0;i<avesAcuaticas.length();i++){
+            infoJson.getJSONArray("animales_aves_acuaticas").put(avesAcuaticas.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -62,7 +64,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_aves_carroña_rapiña").clear();
-        infoJson.getJSONArray("animales_aves_carroña_rapiña").put(avesCarroñaRapiña);
+        for(int i=0;i<= avesCarroñaRapiña.length();i++){
+            infoJson.getJSONArray("animales_aves_carroña_rapiña").put(avesCarroñaRapiña.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -77,7 +81,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_aves_exoticas").clear();
-        infoJson.getJSONArray("animales_aves_exoticas").put(avesExoticas);
+        for(int i=0;i< avesExoticas.length();i++){
+            infoJson.getJSONArray("animales_aves_exoticas").put(avesExoticas.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -92,7 +98,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_aves_terrestres").clear();
-        infoJson.getJSONArray("animales_aves_terrestres").put(avesTerrestres);
+        for(int i=0;i<avesTerrestres.length();i++){
+            infoJson.getJSONArray("animales_aves_terrestres").put(avesTerrestres.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -107,7 +115,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_insectos").clear();
-        infoJson.getJSONArray("animales_insectos").put(insectos);
+        for(int i=0;i<insectos.length();i++){
+            infoJson.getJSONArray("animales_insectos").put(insectos.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -122,7 +132,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_mamiferos_acuaticos").clear();
-        infoJson.getJSONArray("animales_mamiferos_acuaticos").put(mamiferosAcuaticos);
+        for(int i=0;i<mamiferosAcuaticos.length();i++){
+            infoJson.getJSONArray("animales_mamiferos_acuaticos").put(mamiferosAcuaticos.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -137,7 +149,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_mamiferos_terrestres").clear();
-        infoJson.getJSONArray("animales_mamiferos_terrestres").put(mamiferosTerrestres);
+        for(int i=0;i<mamiferosTerrestres.length();i++){
+            infoJson.getJSONArray("animales_mamiferos_terrestres").put(mamiferosTerrestres.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -152,7 +166,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_peces").clear();
-        infoJson.getJSONArray("animales_peces").put(peces);
+        for(int i=0;i<peces.length();i++){
+            infoJson.getJSONArray("animales_peces").put(peces.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -167,7 +183,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_reptiles_acuaticos").clear();
-        infoJson.getJSONArray("animales_reptiles_acuaticos").put(reptilesAcuaticos);
+        for(int i=0;i<reptilesAcuaticos.length();i++){
+            infoJson.getJSONArray("animales_reptiles_acuaticos").put(reptilesAcuaticos.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
     
@@ -182,7 +200,9 @@ public class EliminarAnimal {
             }
         }
         infoJson.getJSONArray("animales_reptiles_terrestres").clear();
-        infoJson.getJSONArray("animales_reptiles_terrestres").put(reptilesTerrestres);
+        for(int i=0;i<reptilesTerrestres.length();i++){
+            infoJson.getJSONArray("animales_reptiles_terrestres").put(reptilesTerrestres.get(i));
+        }
         Files.write(Paths.get("Animales.json"), infoJson.toString().getBytes());
     }
 }

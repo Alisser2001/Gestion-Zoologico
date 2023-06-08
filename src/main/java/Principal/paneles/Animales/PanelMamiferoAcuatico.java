@@ -22,7 +22,7 @@ import javax.swing.JTextField;
  *
  * @author Brahiam
  */
-public class PanelAveCarroña extends JPanel{
+public class PanelMamiferoAcuatico extends JPanel{
     private InitView principal;
     
     private JLabel codigoLabel;
@@ -33,21 +33,20 @@ public class PanelAveCarroña extends JPanel{
     private JTextField especieField;
     private JLabel generoLabel;
     private JTextField generoField;
-    private JLabel edadLabel;
-    private JTextField edadField;
     private JLabel pesoLabel;
     private JTextField pesoField;
     private JLabel dietaPrincipalLabel;
     private JTextField dietaPrincipalField;
     private JLabel dietaCompletalLabel;
     private JTextField dietaCompletaField;
-    private JLabel envergaduraLabel;
-    private JTextField envergaduraField;
-    private JCheckBox vuelaCheckBox;
-    private JLabel tipoPicoLabel;
-    private JTextField tipoPicoField;
-    private JLabel colorPlumajeLabel;
-    private JTextField colorPlumajeField;
+    private JLabel edadLabel;
+    private JTextField edadField;
+    private JLabel tiempoBuceoLabel;
+    private JTextField tiempoBuceoField;
+    private JLabel mecanismoRespiracionLabel;
+    private JTextField mecanismoRespiracionField;
+    private JLabel numAletasLabel;
+    private JTextField numAletasField;
     private JLabel habitadLabel;
     private JTextField habitadField;
     private JLabel zonaLabel;
@@ -76,20 +75,20 @@ public class PanelAveCarroña extends JPanel{
     private JTextField precaucionesField;
     private JLabel especiesCompatiblesLabel;
     private JTextField especiesCompatiblesField;
+    
     private JButton btnGuardar;
     
     private int codigo;
     private String nombre;
     private String especie;
     private String genero;
-    private int edad;
     private float peso;
     private String dietaPrincipal;
     private String dietaCompleta[];
-    private String envergadura;
-    private boolean vuela;
-    private String tipoPico;
-    private String colorPlumaje;
+    private int edad;
+    private String tiempoBuceo;
+    private String mecanismoRespiracion;
+    private int numAletas;
     private String habitad;
     private String zona;
     private String procedencia;
@@ -107,7 +106,9 @@ public class PanelAveCarroña extends JPanel{
     private String[] precauciones;
     private String[] especiesCompatibles;
     
-    public PanelAveCarroña(InitView principal){
+    
+    
+    public PanelMamiferoAcuatico(InitView principal){
         this.principal = principal;
         setLayout(new GridLayout(9,6,5,5));
         setBounds(10,250,800,350);
@@ -128,12 +129,12 @@ public class PanelAveCarroña extends JPanel{
         dietaPrincipalField = new JTextField();
         dietaCompletalLabel = new JLabel("Dieta completa: ");
         dietaCompletaField = new JTextField();
-        envergaduraLabel = new JLabel("Envergadura:");
-        envergaduraField = new JTextField();
-        tipoPicoLabel = new JLabel("Tipo de Pico:");
-        tipoPicoField = new JTextField();
-        colorPlumajeLabel = new JLabel("Color de Plumaje:");
-        colorPlumajeField = new JTextField();
+        tiempoBuceoLabel = new JLabel("Tiempo de Buceo:");
+        tiempoBuceoField = new JTextField();
+        mecanismoRespiracionLabel = new JLabel("Respiración:");
+        mecanismoRespiracionField = new JTextField();
+        numAletasLabel = new JLabel("Número Aletas:");
+        numAletasField = new JTextField();
         habitadLabel = new JLabel("Hábitad:");
         habitadField = new JTextField();
         zonaLabel = new JLabel("Zona:");
@@ -142,6 +143,7 @@ public class PanelAveCarroña extends JPanel{
         procedenciaField = new JTextField();
         riesgoExtincionLabel = new JLabel("Riesgo de Extinción:");
         riesgoExtincionField = new JTextField();
+        gestacionCheckBox = new JCheckBox("Gestación");
         tipoGestacionLabel = new JLabel("Tipo de Gestación:");
         tipoGestacionField = new JTextField();
         tiempoGestacionLabel = new JLabel("Tiempo de Gestación:");
@@ -159,8 +161,6 @@ public class PanelAveCarroña extends JPanel{
         caracterField = new JTextField();
         precaucionesLabel = new JLabel("Precauciones:");
         precaucionesField = new JTextField();
-        gestacionCheckBox = new JCheckBox("Gestacion");
-        vuelaCheckBox = new JCheckBox("Vuela");
         especiesCompatiblesLabel = new JLabel("Especies compatibles: ");
         especiesCompatiblesField = new JTextField();
         
@@ -182,12 +182,12 @@ public class PanelAveCarroña extends JPanel{
         add(dietaPrincipalField);
         add(dietaCompletalLabel);
         add(dietaCompletaField);
-        add(envergaduraLabel);
-        add(envergaduraField);
-        add(tipoPicoLabel);
-        add(tipoPicoField);
-        add(colorPlumajeLabel);
-        add(colorPlumajeField);
+        add(tiempoBuceoLabel);
+        add(tiempoBuceoField);
+        add(mecanismoRespiracionLabel);
+        add(mecanismoRespiracionField);
+        add(numAletasLabel);
+        add(numAletasField);
         add(habitadLabel);
         add(habitadField);
         add(zonaLabel);
@@ -212,12 +212,12 @@ public class PanelAveCarroña extends JPanel{
         add(precaucionesField);
         add(especiesCompatiblesLabel);
         add(especiesCompatiblesField);
-        add(venenosoCheckBox);
-        add(vuelaCheckBox);
         add(gestacionCheckBox);
         add(maltratadoCheckBox);
         add(peligrosoCheckBox);
+        add(venenosoCheckBox);
         add(btnGuardar);
+        
         
         btnGuardar.addActionListener(new ActionListener() {
             @Override
@@ -227,7 +227,7 @@ public class PanelAveCarroña extends JPanel{
                 codigo = Integer.parseInt(codigoField.getText());
                 edad = Integer.parseInt(edadField.getText());
                 peso = Float.parseFloat(pesoField.getText());
-                vuela = vuelaCheckBox.isSelected();
+                numAletas = Integer.parseInt(numAletasField.getText());
                 gestacion = gestacionCheckBox.isSelected();
                 peligroso = peligrosoCheckBox.isSelected();
                 maltratado = maltratadoCheckBox.isSelected();
@@ -236,15 +236,13 @@ public class PanelAveCarroña extends JPanel{
                 especie = especieField.getText();
                 genero = generoField.getText();
                 dietaPrincipal = dietaPrincipalField.getText();
-                envergadura = envergaduraField.getText();
                 dietaCompleta = textoArray(dietaCompletaField);
+                mecanismoRespiracion = mecanismoRespiracionField.getText();
                 
-                tipoPico = tipoPicoField.getText();
-                colorPlumaje = colorPlumajeField.getText();
                 habitad = habitadField.getText();
                 zona = zonaField.getText();
                 procedencia = procedenciaField.getText();
-                especiesCompatibles = textoArray(especiesCompatiblesField);
+                tiempoBuceo = tiempoBuceoField.getText();
                 riesgoExtincion = riesgoExtincionField.getText();
                 tipoGestacion = tipoGestacionField.getText();
                 tiempoGestacion = tiempoGestacionField.getText();
@@ -253,16 +251,18 @@ public class PanelAveCarroña extends JPanel{
                 comportamientoSocial = comportamientoSocialField.getText();
                 caracter = caracterField.getText();
                 precauciones = textoArray(precaucionesField);
+                especiesCompatibles = textoArray(especiesCompatiblesField);
                 
                 
                 
                 CrearNuevoAnimal nuevoAnimal = new CrearNuevoAnimal();
                 try {
-                    nuevoAnimal.crearNuevaAveCarroñaRapiña(codigo, nombre, especie, 
-                            genero, edad, peso, dietaPrincipal, dietaCompleta, envergadura, 
-                            vuela, tipoPico, colorPlumaje, habitad, zona, procedencia, riesgoExtincion,
-                            gestacion, tipoGestacion, tiempoGestacion, peligroso, nivelPeligrosidad, venenoso, 
-                            tipoVeneno, maltratado, comportamientoSocial, caracter, precauciones, especiesCompatibles);
+                    nuevoAnimal.crearNuevoMamiferoAcuatico(codigo, nombre, especie,
+                            genero, peso, dietaPrincipal, dietaCompleta, edad, tiempoBuceo, 
+                            mecanismoRespiracion, numAletas, habitad, zona, procedencia, 
+                            riesgoExtincion, gestacion, tipoGestacion, tiempoGestacion,
+                            peligroso, nivelPeligrosidad, venenoso, tipoVeneno, maltratado,
+                            comportamientoSocial, caracter, precauciones, especiesCompatibles);
                 } catch (IOException ex) {
                     Logger.getLogger(PanelAnfibio.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -279,5 +279,4 @@ public class PanelAveCarroña extends JPanel{
         
         return stringArray;
     }
-    
 }

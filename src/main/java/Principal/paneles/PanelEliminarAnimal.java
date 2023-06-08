@@ -35,7 +35,7 @@ public class PanelEliminarAnimal extends JPanel{
         this.setLayout(new GridLayout(2,3,15,0));
         setBounds(15,335,850,80);
         
-        informeLabel = new JLabel("Código: ");
+        informeLabel = new JLabel("Tipo de animal: ");
         informeLabel.setFont(new Font("Arial",Font.BOLD,20));
         informeLabel.setHorizontalAlignment(JLabel.CENTER);
         add(informeLabel);;
@@ -57,7 +57,7 @@ public class PanelEliminarAnimal extends JPanel{
         add(comboBox);
         add(new JLabel(""));
         
-        JLabel codigo = new JLabel("Tipo de animal: ");
+        JLabel codigo = new JLabel("Codigo: ");
         codigo.setFont(new Font("Arial",Font.BOLD,20));
         codigo.setHorizontalAlignment(JLabel.CENTER);
         add(codigo);

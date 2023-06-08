@@ -1,7 +1,7 @@
 {"clientes": [
   {
     "identificacion": 123456789,
-    "puntos": 250,
+    "puntos": 125,
     "nombre": "John Doe"
   },
   {
@@ -20,18 +20,13 @@
     "nombre": "Sarah Williams"
   },
   {
-    "identificacion": 71753417,
-    "puntos": 75,
-    "nombre": "Carlos mati"
+    "identificacion": 1315,
+    "puntos": 225,
+    "nombre": "Furnesto Garcia"
   },
   {
-    "identificacion": 43158401,
-    "puntos": 50,
-    "nombre": "nancy bedoya"
-  },
-  {
-    "identificacion": 1000762385,
+    "identificacion": 7777,
     "puntos": 75,
-    "nombre": "Brahiam Acosta"
+    "nombre": "Técnicas"
   }
 ]}
